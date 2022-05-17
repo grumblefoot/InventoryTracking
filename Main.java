@@ -3,7 +3,7 @@ import java.util.*;
 /**
  * This Class runs the app and its tests.
  * 
- * @author Rowan W Osmon version 0.01
+ * @author Rowan W Osmon version 0.02
  *
  */
 public class Main {
@@ -12,7 +12,7 @@ public class Main {
    * This class holds information about items. Currently it just stores the item
    * name, but it could also store information such as price
    * 
-   * @author Rowan W Osmon version 0.01
+   * @author Rowan W Osmon version 0.02
    */
   class Item {
 
@@ -35,7 +35,7 @@ public class Main {
    * expanded by making it sort by name or price if item sorting is a wanted
    * function.
    * 
-   * @author Rowan W Osmon version 0.01
+   * @author Rowan W Osmon version 0.02
    *
    */
   class ItemOrder {
@@ -76,7 +76,7 @@ public class Main {
   /**
    * This class creates and stores information about warehouses.
    * 
-   * @author icein
+   * @author Rowan W Osmon version 0.02
    *
    */
   class Locations {
