@@ -13,7 +13,7 @@ public class Locations {
 	/**
 	 * This is the list of all known warehouses
 	 */
-	public List<Warehouse> locations = new ArrayList<Warehouse>();
+	private List<Warehouse> locations = new ArrayList<Warehouse>();
 	
 	public Locations(){
 		
@@ -24,7 +24,7 @@ public class Locations {
 	 * @param name The name/location of the warehouse
 	 */
 	public void addLocation(String name) {
-		locations.add(new Warehouse(name));
+		getLocations().add(new Warehouse(name));
 	}
 	
 	/**
@@ -33,10 +33,22 @@ public class Locations {
 	 */
 	public String viewLocations() {
 		StringBuilder sb = new StringBuilder();
-		for (Warehouse w : locations) {
+		for (Warehouse w : getLocations()) {
 			sb.append(w.getMyLocation() + "\n");
 			sb.append(w.viewItems());
 		}
 		return sb.toString();
 	}
+
+	public List<Warehouse> getLocations() {
+		return locations;
+	}
+
+	public void setLocations(List<Warehouse> locations) {
+		this.locations = locations;
+	}
+	
+	
+	
+	
 }

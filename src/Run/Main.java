@@ -63,8 +63,8 @@ public class Main {
 		testLocation.addLocation("WestWarehouse");
 		testLocation.addLocation("EastWarehouse");
 		System.out.println(testLocation.viewLocations());
-		testLocation.locations.get(0).createInventoryItem("BasketBall", 50);
-		testLocation.locations.get(1).createInventoryItem("XBox", 16);
+		testLocation.getLocations().get(0).createInventoryItem("BasketBall", 50);
+		testLocation.getLocations().get(1).createInventoryItem("XBox", 16);
 		System.out.println(testLocation.viewLocations());
 	}
 	
