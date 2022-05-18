@@ -20,9 +20,11 @@ public class Warehouse {
 	 * so that multiple warehouses can be easily distinguished.
 	 */
 	private String myLocation;
+	private String myPositionInArray;
 	
 	public Warehouse(String theLocation) {
 		setMyLocation(theLocation);
+		
 	}
 	
 	/**
@@ -68,8 +70,16 @@ public class Warehouse {
 		return myLocation;
 	}
 
-	public void setMyLocation(String myLocation) {
+	private void setMyLocation(String myLocation) {
 		this.myLocation = myLocation;
+	}
+
+	public String getMyPositionInArray() {
+		return myPositionInArray;
+	}
+
+	public void setMyPositionInArray(String myPositionInArray) {
+		this.myPositionInArray = myPositionInArray;
 	}
 	
 }

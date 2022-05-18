@@ -5,7 +5,7 @@ import java.util.List;
 
 /**
  * This class creates and stores information about warehouses. 
- * @author icein
+ * @author Rowan W Osmon
  *
  */
 public class Locations {
@@ -19,12 +19,19 @@ public class Locations {
 		
 	}
 	
+	public Locations(String name) {
+		getLocations().add(new Warehouse(name));
+		locations.get((locations.size()-1)).setMyPositionInArray("" + (locations.size()-1));
+	}
+	
 	/**
 	 * This method adds a new warehouse location.
 	 * @param name The name/location of the warehouse
 	 */
 	public void addLocation(String name) {
 		getLocations().add(new Warehouse(name));
+		String s = "" + (locations.size()-1);
+		locations.get(locations.size()-1).setMyPositionInArray(s);
 	}
 	
 	/**
@@ -34,7 +41,8 @@ public class Locations {
 	public String viewLocations() {
 		StringBuilder sb = new StringBuilder();
 		for (Warehouse w : getLocations()) {
-			sb.append(w.getMyLocation() + "\n");
+			sb.append("Access # " + w.getMyPositionInArray()+ "\n");
+			sb.append("Name " + w.getMyLocation() + "\n");
 			sb.append(w.viewItems());
 		}
 		return sb.toString();
